@@ -1,5 +1,5 @@
-import * as THREE from "https://esm.sh/three@0.180.0";
-import { GLTFLoader } from "https://esm.sh/three@0.180.0/examples/jsm/loaders/GLTFLoader.js";
+import * as THREE from "three";
+import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/loaders/GLTFLoader.js"; 
 
 const root = document.getElementById("webgl");
 const loaderScreen = document.getElementById("loader");
@@ -253,25 +253,15 @@ loader.load(
   /* ERROR */
 
   (error) => {
+    console.error("Could not load car.glb", error);
 
-    console.error(
-      "FAILED TO LOAD 3D CAR:",
-      error
-    );
+    loaderScreen.querySelector(".loader-label").textContent =
+      "CAR FILE COULD NOT LOAD";
 
-    if (loaderScreen) {
-
-      const label =
-        loaderScreen.querySelector(
-          ".loader-label"
-        );
-
-      if (label) {
-
-        label.textContent =
-          "3D VEHICLE FAILED — RETRYING";
-
-      }
+    setTimeout(() => {
+      loaderScreen.classList.add("done");
+    }, 1000);
+   
 
     }
 
