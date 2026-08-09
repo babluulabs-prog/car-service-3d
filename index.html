@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050505" />
+  <title>VOLT AUTO — Premium Car Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="loader" aria-hidden="true">
+    <div class="loader-brand">VOLT<span>AUTO</span></div>
+    <div class="loader-bar"><i id="loaderBar"></i></div>
+    <div class="loader-label">LOADING VEHICLE EXPERIENCE</div>
+  </div>
+
+  <div id="webgl"></div>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="VOLT AUTO home">VOLT<span>AUTO</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Book service</a>
+  </header>
+
+  <main id="top">
+    <section class="hero panel">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">PREMIUM AUTOMOTIVE CARE</p>
+        <h1>Precision.<br><span>Performance.</span></h1>
+        <p class="lead">Expert servicing, diagnostics and detailing for drivers who expect more from every mile.</p>
+        <div class="actions">
+          <a class="button primary" href="#contact">Book a service</a>
+          <a class="button ghost" href="#services">Explore services</a>
+        </div>
+      </div>
+      <div class="hero-note">SCROLL TO EXPLORE <b>↓</b></div>
+    </section>
+
+    <section id="services" class="panel right">
+      <div class="glass reveal">
+        <p class="eyebrow">01 / SERVICES</p>
+        <h2>Complete care.<br><span>One destination.</span></h2>
+        <p class="body-copy">From scheduled maintenance to advanced diagnostics, every service is performed with precision.</p>
+        <div class="service-grid">
+          <article><small>01</small><h3>Engine & Diagnostics</h3><p>Computer diagnostics, inspection and precision maintenance.</p></article>
+          <article><small>02</small><h3>Brakes & Suspension</h3><p>Confident stopping, handling and safety checks.</p></article>
+          <article><small>03</small><h3>AC & Electrical</h3><p>Cooling, battery, electrical and climate-system care.</p></article>
+          <article><small>04</small><h3>Detailing</h3><p>Deep interior care and premium exterior finish.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" class="panel left">
+      <div class="glass reveal">
+        <p class="eyebrow">02 / THE STANDARD</p>
+        <h2>Built for the<br><span>long drive.</span></h2>
+        <p class="body-copy">Modern equipment, experienced technicians and a service process designed around your vehicle.</p>
+        <div class="stats">
+          <div><strong>15+</strong><span>Years experience</span></div>
+          <div><strong>8K+</strong><span>Cars serviced</span></div>
+          <div><strong>4.9</strong><span>Customer rating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel center">
+      <div class="glass booking reveal">
+        <p class="eyebrow">03 / BOOK YOUR SERVICE</p>
+        <h2>Your car deserves<br><span>the best care.</span></h2>
+        <p class="body-copy">Tell us what your vehicle needs and our team will get you on the road.</p>
+        <a class="button primary large" href="tel:+910000000000">Call to book</a>
+        <a class="text-link" href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp us →</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>VOLT<span>AUTO</span></div>
+      <p>Premium Automotive Service</p>
+    </footer>
+  </main>
+
+  <div class="touch-hint" id="touchHint">DRAG THE CAR</div>
+    <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+    }
+  }
+  </script>
+<script type="module" src="./script.js"></script>
+</body>
+</html>
